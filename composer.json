@@ -1,7 +1,7 @@
 {
-    "name": ":vendor/:package_name",
+    "name": "geega/php-simplex-framework",
     "type": "library",
-    "description": ":package_description",
+    "description": "Simple php framework",
     "require": {
         "php" : "~5.6|~7.0"
     },
@@ -11,7 +11,7 @@
     },
     "autoload": {
         "psr-4": {
-            ":vendor\\:package_name\\": "src"
+            "Geega\\Simplex\\": "src"
         }
     }
 }
