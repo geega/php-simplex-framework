@@ -20,7 +20,7 @@ class Router
 
     private $map = [];
 
-    public function __construct(Request $request)
+    public function __construct(Request $request )
     {
         $this->request = $request;
     }
@@ -58,6 +58,11 @@ class Router
     {
         return $this->method;
     }
+
+    /**
+     * @return $this
+     * @throws \Exception
+     */
     public function getCurrent()
     {
         if (empty($this->map[$this->request->requestMethod])) {

@@ -8,6 +8,7 @@
 namespace Geega\Simplex;
 
 
+use Geega\NativeTemplate\Template;
 use Geega\Request\Request;
 use Geega\Response\Response;
 
@@ -16,8 +17,9 @@ class App
     public static function init()
     {
         MSO::set('Request', new Request());
-        MSO::set('Router', new Router();
+        MSO::set('Router', new Router(new Request()));
         MSO::set('Response', new Response());
+        MSO::set('Tpl', new Template(TPL_DIR));
     }
 
     public function run()
